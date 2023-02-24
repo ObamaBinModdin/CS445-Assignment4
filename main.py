@@ -23,7 +23,10 @@ for tweet in df:
     # Removes common filler words.
     tweetAsList = [i for i in tweetAsList if i not in ['the', 'that', 'an', 'a', 'for', 'in', 'be', 'by', 'or', 'and',
                                                        'with', 'to', 'is', 's', 'of', 'but', 'are', 'at', 'so', 'on',
-                                                       'it', 'but', 'this', 'as', 'was']]
+                                                       'it', 'but', 'this', 'as', 'was', 'i', 'we', 'you', 'not', 'have'
+                                                       , 'just', 'my', 'from', "it\'s", 'than', 'yes', 'no', 'if',
+                                                       'should', 'would', 'about', 'there', 'has', 'much', "...", 'our'
+                                                       , 'too', 'also', 'what', 'also', 'very', 'your', 'which']]
     # Adds the word to the dictionary 'wordCount' if not present. Otherwise, increment count.
     for word in tweetAsList:
         wordCount[word] = wordCount.get(word, 0) + 1
